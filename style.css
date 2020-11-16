@@ -1,0 +1,105 @@
+/* body {
+    background: burlywood;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* WE PUT THIS BEFORE MEDIA QUERY
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // need 2 collumn in the browser
+    grid-template-columns: 200px 1fr; // fist column 2oopx and second column the rest of the width
+    grid-template-columns: 1fr 5oopx 5oopx 1fr ; /* 4 column now with 500px
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ".title title." /* 2 column 1fr 1fr  and one raw (4 column now plus . dot)
+    ".header  header." /* 2 column and 1 raw
+    ".sidebar content." /* 1fr for sidebar 1fr for content 1 raw sidebar and content are sharing column in 2
+    "footer ." is not going to fill the space
+    ".footer footer."
+    ;
+
+} */
+
+
+/* .title {
+    grid-column-start: 1;  title start in column
+    grid-column-end: 3; end column 3
+    grid-column-end: span 2; same as above
+    grid-column: 1/3;  same as above
+    grid-column-end: span 1;
+    grid-row-end: span 2;
+
+} */
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr  1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "title title"
+    "header  header"
+    "sidebar content"
+    "footer footer"
+    ;
+    grid-gap: 10px;
+    
+
+} 
+
+
+.title {
+    grid-area: title;
+    
+    
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+.grid div:nth-child(even)  {
+    background: red;
+}
+
+.grid div:nth-child(odd)  {
+    background: green;
+}
+
+
+
+/* FOR MOBILE PHONE */
+
+@media screen and (min-width: 736px)
+{   
+    .grid {
+    display: grid;
+    grid-template-columns: 1fr  1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "title title"
+    "header  header"
+    "sidebar content"
+    "footer footer"
+    }
+
+
+}
